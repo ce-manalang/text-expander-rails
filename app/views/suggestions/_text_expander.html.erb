@@ -2,9 +2,11 @@
 <p>Use <code>#</code> to trigger the expander</p>
 
 <h2>Normal text-expander element</h2>
-<text-expander keys="#">
-  <textarea autofocus rows="10" cols="40"></textarea>
-</text-expander>
-<ul id="suggester-list" class="suggester suggester-container" role="listbox" hidden>
-  <%= render partial: 'suggestions/suggester', locals: { suggestions: @suggestions } %>
-</ul>
+<div style="position: relative">
+  <text-expander keys="#">
+    <textarea autofocus rows="10" cols="40"></textarea>
+  </text-expander>
+  <ul id="suggester-list" class="suggester suggester-container" role="listbox" hidden>
+    <%= render partial: 'suggestions/suggester', locals: { suggestions: @suggestions } %>
+  </ul>
+</div>

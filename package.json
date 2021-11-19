@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@github/text-expander-element": "^2.2.1",
+    "@primer/css": "18.1.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",

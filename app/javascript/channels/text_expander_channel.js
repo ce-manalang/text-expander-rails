@@ -16,7 +16,12 @@ consumer.subscriptions.create("TextExpanderChannel", {
         Promise.resolve(
           this.perform("update_suggestions", { text: text })
         ).then(() => {
+          const textarea = document.querySelector('textarea')
+          const startPos = textarea.selectionStart
+          const endPos = textarea.selectionEnd
+
           const suggestions = document.querySelector('#suggester-list').cloneNode(true)
+          suggestions.style = "left: " + startPos + "px; top: " + endPos + "px;"
           suggestions.hidden = false
 
           return {

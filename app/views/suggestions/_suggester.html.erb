@@ -1,0 +1,5 @@
+<% suggestions.each do |suggestion| %>
+  <li id="option-<%= suggestion.id %>" role="option" data-value="#<%= suggestion.id %>">
+    &#35;<%= suggestion.id %> <%= suggestion.title %>
+  </li>
+<% end %>
